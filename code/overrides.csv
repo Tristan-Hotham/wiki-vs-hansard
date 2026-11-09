@@ -1,0 +1,19 @@
+term,title,action,why
+Abingdon,Abingdon-on-Thames,alias,Wikipedia title uses the full town name
+Droitwich,Droitwich Spa,alias,Wikipedia title uses the full town name
+East Dereham,Dereham,alias,Wikipedia title uses the short town name
+Leamington,Leamington Spa,alias,"Hansard term is the short name; the article is Leamington Spa"
+Staines,Staines-upon-Thames,alias,Wikipedia title uses the full town name
+Wigston Magna,Wigston,alias,Wikipedia article covers Wigston Magna
+Y Bala,"Bala, Gwynedd",alias,Welsh name in Hansard term list; English article title
+Glyn-neath,Glynneath,alias,spelling variant
+Bargod,Bargoed,alias,Welsh spelling in Hansard term list
+Lechlade-on-Thames,Lechlade,alias,Wikipedia title uses the short town name
+Braunstone,Braunstone Town,alias,the Wikidata settlement is Braunstone Town
+Rhosllannerchrugog,Rhosllanerchrugog,alias,spelling variant
+Hoyland Nether,Hoyland,alias,Wikipedia article covers Hoyland Nether
+St Just,St Just in Penwith,alias,"Hansard point is St Just in Penwith, Cornwall"
+Portishead,"Portishead, Somerset",alias,Hansard point lies 18 km from the Wikidata point (beyond the distance rule); same town
+Skelton,Skelton-in-Cleveland,alias,"Hansard point is Skelton in Redcar and Cleveland"
+Cowbridge,Cowbridge,prefer,"two Wikidata items share the point: the town and the Roman town; use the town"
+Barnet,,drop,"""in Barnet"" mostly means the London Borough of Barnet, not the town of Chipping Barnet"

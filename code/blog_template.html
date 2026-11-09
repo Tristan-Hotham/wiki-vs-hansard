@@ -1,0 +1,124 @@
+<!-- wp:paragraph -->
+<p><em>Which places does the public look up, and which does Parliament talk about? I set a year of Wikipedia reading against twenty-one years of Commons debate for {{n.main|int}} towns and cities across the UK. The two mostly agree. Where they part ways, the electoral map seems to be doing a lot of the work.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/wiki-vs-hansard/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.24092583">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Some places are famous and hardly ever said in Parliament. Others come up in the Commons week after week while few people outside them look them up. I wanted to know how far the two kinds of attention line up, and where they don't.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For Parliament I used my earlier count of Hansard: how many Commons speeches from 2005 to 2025 said "in" followed by a place's name, "in Kettering", "in Port Talbot". For the public I used the number of times people opened each place's English Wikipedia article in 2024. Matching one to the other took care: there are several Ripleys and Farnboroughs, some articles were renamed during the year, and Wikidata's list of UK settlements even includes Gibraltar. I matched {{data.n_matched|int}} of {{data.n_terms|int}} names and kept {{n.main|int}} places with a clean match on both sides.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Mostly, they agree</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Big, well known places get both kinds of attention, and the two rankings line up closely (a rank correlation of {{desc.spearman_views_mentions|f2}}). But not one for one. Comparing places of the same population, one with twice the Wikipedia views gets about {{prose.views_double|int}}% more mentions in the Commons, not twice as many. London alone takes {{prose.london_mentions_pc|f1}}% of all the mentions here but only {{prose.london_views_pc|f1}}% of the views.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_scatter.png|Scatter plot of Wikipedia views against Commons mentions for UK places on log scales, rising together, with Kettering and Redcar above the cloud and Saltburn-by-the-Sea and the City of London far below|Each dot is a place: Wikipedia views in 2024 against Commons mentions from 2005 to 2025, coloured by how far mentions sit above or below what views and population predict.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A seat named after you</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The biggest difference is about names on the electoral map. A place whose name is part of a Commons seat's name, like Kettering, Redcar or Dudley, gets {{prose.seat_x|f1}} times the mentions of a place with the same views and population. When I shuffled the seat names at random among similar places a thousand times, nothing came close. Part of this is how the counting works: a search for "in Bury" also finds "in Bury North", and "in Kettering" can mean the seat as well as the town. But places that only appear later in a seat's name, like Morley in Leeds South West and Morley, where neither of those can happen, still get {{M1_types.inner.b|int}}% more mentions. Of the 25 places most talked about for their profile, {{rank.seat_share_top25_pc|int}}% have a seat named after them; of the 25 least talked about, {{rank.seat_share_bottom25_pc|int}}%.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Is it the name itself? Seat names change when boundaries are redrawn, so I followed the {{event.2024.n_treated|int}} places that first got a seat named after them at the 2024 election. Their mentions rose by {{prose.ev24_k0|int}}% in 2024 and {{prose.ev24_k1|int}}% in 2025 compared with 2023. But they were already rising for years before. The places that get seats named after them are places on the up, so I can't say how much of the jump the name causes.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_event.png|Line chart of mentions of places newly named in a Commons seat in 2024, relative to 2023: about half as many in 2015, rising unevenly, then up {{prose.ev24_k0|int}} percent in 2024 and {{prose.ev24_k1|int}} percent in 2025|Places first named in a Commons seat in 2024, compared with places whose status never changed.}}
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>The electoral map is part of what Parliament talks about. A town with a seat named after it gets more than twice the mentions.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">No sign that the edges are forgotten</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A lot has been written about places that feel ignored by Westminster. On this measure there is no sign of it. Welsh places get {{M1.Wales_vs_england.b|int}}% more mentions than English places with the same attention and population, in every version of the analysis I tried. Scotland and Northern Ireland are not clearly different from England. The first model also said northern English towns get more mentions than southern ones, and London's districts fewer, but both of those turn on one place, London itself: leave it out and the gaps disappear. How deprived a place is makes no clear difference.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_effects.png|Dot and whisker chart: a seat named after the place about plus {{M1.seat.b|f0}} percent, Wales about plus {{M1.Wales_vs_england.b|f0}} percent, Scotland and Northern Ireland crossing zero, deprivation near zero|What goes with more mentions in the Commons, holding the other things fixed, with 95% intervals.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Talked about more, and less</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Among places big enough to expect at least 20 mentions, Newtownards in County Down was mentioned {{rank.over.0.oe|f1}} times as often as its views and population predict, then Redcar ({{rank.over.1.oe|f1}}), Kettering ({{rank.over.2.oe|f1}}) and Dudley ({{rank.over.3.oe|f1}}). At the other end are suburbs and towns inside seats named after somewhere else: Bamber Bridge, Litherland, Waltham Abbey, Ewell. Some gaps come from the public side. Southport had {{cases.Southport.views|int}} Wikipedia views in 2024, a year of terrible news there. Saltburn-by-the-Sea had {{cases.Saltburn-by-the-Sea.views|int}} after a hit film took its name, but people usually just say "Saltburn", so its full name barely appears in debate, and I keep names like that out of the rankings.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_ranks.png|Two dot plots of observed against expected mentions: Newtownards, Redcar, Kettering and Dudley far above expectation; Becontree, Broughty Ferry, Bamber Bridge and Litherland far below|The places furthest from what their Wikipedia views and population predict.}}
+
+{{IMG|b_map.png|Map of the UK with dots for places coloured from blue (fewer Commons mentions than expected) to red (more), mixed everywhere, with many blue dots in and around London|Commons mentions against expectation across the UK, with London enlarged.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Drifting apart</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The link between the two weakened over time. Today's Wikipedia views predict mentions from 2005 to 2014 better than mentions from 2015 to 2025, and, more oddly, they line up best of all with the debates of 1945 to 1979. What people look up now looks more like Parliament's old map of Britain than its current one.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_time.png|Chart of four values, highest for 1945 to 1979 at about {{exploratory_gradient.1945 to 1979.b|f2}} and lowest for 2015 to 2025 at about {{exploratory_gradient.2015 to 2025.b|f2}}|How strongly 2024 Wikipedia views predict Commons mentions in each period.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Commons counts come from <a href="https://maps.tristanhotham.com/hansard-places/">Mentioned in the House</a>. The "in" phrase leaves out "the hon. Member for", surnames and lists of votes; names that are ordinary words were checked by sample, and names shared by two places were left out. Wikipedia views are human readers only, from Wikimedia's pageview counts, for the article each place's Wikidata entry points to. I wrote the analysis plan down before running the models, then reran the main model {{robust_range.n_checks|int}} ways: other years, other population sources, stricter or looser name matching, without the biggest places, and with one region left out at a time. The share of extra mentions linked to a seat name stayed between {{robust_range.seat.0|int}}% and {{robust_range.seat.1|int}}%.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is a comparison, not an experiment. Wikipedia views follow tourism, television, news and naming quirks, and readers come from all over the world. One year of reading is set against twenty-one years of debate. And being talked about in Parliament is not the same as being helped by it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/wiki-vs-hansard/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.24092583">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/wiki-vs-hansard">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Hansard, House of Commons, via the UK Parliament Hansard API, counted in Mentioned in the House (Hotham 2026). Contains Parliamentary information licensed under the Open Parliament Licence v3.0.</li>
+<li>Seat names at the 2005, 2010 and 2024 general elections from <a href="https://maps.tristanhotham.com/elections-since-1832/">Who Won Here?</a> (Hotham 2026).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>English Wikipedia pageviews (Wikimedia, CC0) and Wikidata (CC0). 2011 Census and boundaries from the ONS (Open Government Licence v3.0). Base map: OpenFreeMap, OpenStreetMap contributors (ODbL).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Further reading: F. R. Baumgartner and B. D. Jones, Agendas and Instability in American Politics (1993); A. Rodríguez-Pose, The revenge of the places that don't matter, Cambridge Journal of Regions, Economy and Society (2018); T. Yasseri and J. Bright, Wikipedia traffic data and electoral prediction, EPJ Data Science (2016).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
