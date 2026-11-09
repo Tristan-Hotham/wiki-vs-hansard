@@ -1,0 +1,15 @@
+# Cover note: Who Gets Talked About?
+
+## Suggested journals (no mandatory author charges; checked 2026)
+
+The manuscript is about 8,200 words before the references (about 10,000 with references and appendix tables), with 6 figures, 6 tables in the main text and 2 in the appendix.
+
+1. **Political Studies** (Sage, for the Political Studies Association). Original research articles up to 9,000 words including notes, excluding references; "There are no fees payable to submit or publish in this journal" (open access optional through Sage Choice). Fit: good for a general political science paper on representation and attention; fits the limit as it stands, with the regression tables kept as an online appendix. Source: Sage submission guidelines for Political Studies (PSX).
+2. **Parliamentary Affairs** (Oxford University Press, for the Hansard Society). Original articles up to 8,000 words, with up to 5 figures and tables; no submission fee; open access optional with a charge. Fit: very good, a UK parliamentary-representation question with new Hansard data. Needs trimming by a few hundred words and moving seven of the twelve figures and tables to an online appendix. Source: https://academic.oup.com/pa/pages/General_Instructions
+3. **Politics** (Sage, for the Political Studies Association). Research articles up to 8,000 words, excluding references and illustrations; "There are no fees payable to submit or publish in this journal." Fit: good for a shorter, UK-focused version; needs cutting by about 250 words. Source: Sage submission guidelines for Politics (POL).
+
+Also considered: **Policy & Internet** (Wiley) asks for 6,000 to 8,000 words including references, so the paper would need cutting by about 2,000 words; its fee position was not confirmed. The Journal of Legislative Studies and Political Studies Review were named in the brief, but their author pages could not be reached to check limits and charges, so they are not recommended here without checking.
+
+## Summary for a cover letter (150 words)
+
+This article asks which UK places the House of Commons talks about, relative to the public's own interest in them. It links Hansard counts of "in <place>" contributions from 2005 to 2025 to 2024 English Wikipedia pageviews for 1,425 towns and cities with a pre-specified analysis plan and twenty robustness checks. Parliamentary attention follows public attention, but less than proportionally (elasticity 0.54). The strongest departure is representational: places that give their name to a constituency are mentioned about 2.2 times as often as similar places, an association random reassignment does not reproduce and that survives, at 67 per cent, where phrase matching cannot produce it; boundary changes show these places were already rising in prominence. Welsh places are mentioned more, not less, than comparable English ones. The link between the two attentions weakened. All data and code are released openly, and the paper offers the first place-level comparison of the two attentions.
